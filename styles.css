@@ -21,7 +21,9 @@ body {
     padding: 10px 20px;
     background-color: #343a40;
     color: #fff;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
 }
 
@@ -49,19 +51,14 @@ body {
 
 .navbar-toggle {
     display: none;
+    font-size: 24px;
 }
 
-header {
+.header {
     position: relative;
-    background-image: url('https://github.com/ujvalmech/mother/blob/main/header.jpg?raw=true');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url('https://github.com/ujvalmech/mother/blob/main/header.jpg?raw=true') no-repeat center center/cover;
 }
 
 .header-overlay {
@@ -72,95 +69,92 @@ header {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     color: #fff;
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .header-text {
     position: relative;
-    z-index: 2; /* Make sure text is on top */
+    z-index: 1;
 }
 
 .header-text h1 {
-    font-size: 2.5rem;
+    font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-weight: 700;
 }
 
 .header-text p {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
 }
 
-section {
-    padding: 50px 0;
+.section {
+    padding: 60px 0;
+}
+
+.partition-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .menu-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.menu-item:hover {
-    transform: scale(1.02);
+    flex: 1;
+    min-width: 200px;
 }
 
 .menu-item img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
 }
 
-.menu-item h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    padding: 0 15px;
-}
-
-.menu-item p {
-    padding: 0 15px;
+.menu-description {
     display: none;
 }
 
-.map-container {
+.contact-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-map {
+    flex: 1;
 }
 
 iframe {
-    border: 0;
     width: 100%;
-    max-width: 600px;
+    height: 100%;
+    border: none;
 }
 
 footer {
-    background-color: #343a40;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
+    background: #343a40;
+    color: #fff;
 }
 
 .back-to-home {
-    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #343a40;
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -170,44 +164,32 @@ footer {
 }
 
 .back-to-home:hover {
-    background-color: #495057;
+    background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
     .navbar-menu {
         display: none;
-        flex-direction: column;
-        gap: 0;
-        background-color: #343a40;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .navbar-menu.active {
-        display: flex;
     }
 
     .navbar-toggle {
         display: block;
-        color: #fff;
-        font-size: 1.5rem;
-        cursor: pointer;
+    }
+
+    .menu-items {
+        flex-direction: column;
     }
 
     .menu-item {
-        flex: 1 1 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-overlay h1 {
-        font-size: 1.8rem;
+        min-width: 100%;
     }
 
-    .header-overlay p {
-        font-size: 1rem;
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-map {
+        width: 100%;
     }
 }
