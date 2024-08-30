@@ -61,6 +61,7 @@ header {
     justify-content: center;
     align-items: center;
     color: #fff;
+    overflow: hidden;
 }
 
 .header-overlay {
@@ -75,22 +76,25 @@ header {
     align-items: center;
     text-align: center;
     color: #fff;
+    backdrop-filter: blur(10px); /* Apply blur effect */
     z-index: 1;
 }
 
 .header-text {
     position: relative;
+    z-index: 2; /* Make sure text is on top */
 }
 
 .header-text h1 {
     font-size: 2.5rem;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
 }
 
 .header-text p {
     font-size: 1.2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 section {
