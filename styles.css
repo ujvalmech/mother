@@ -14,6 +14,7 @@ body {
     padding: 0 15px;
 }
 
+/* Navigation Styles */
 .navbar {
     display: flex;
     align-items: center;
@@ -28,21 +29,22 @@ body {
 }
 
 .navbar-logo {
-    height: 50px; /* Adjust logo size */
+    height: auto; /* Auto-fit logo size */
+    max-height: 50px; /* Set a maximum height for the logo */
     object-fit: contain; /* Ensure the logo fits well */
 }
 
 .navbar-menu {
     display: flex;
     gap: 15px;
-    justify-content: flex-end; /* Align menu items to the right */
+    justify-content: flex-end; /* Align menu items to the right on larger screens */
 }
 
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
     padding: 8px 12px;
-    font-size: 13px; /* Reduced font size */
+    font-size: 13px; /* Adjusted font size */
     transition: background-color 0.3s;
 }
 
@@ -97,6 +99,7 @@ body {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* Section and Partition Boxes */
 .section {
     padding: 60px 0;
 }
@@ -127,7 +130,8 @@ body {
 
 .menu-item img {
     width: 100%;
-    height: auto; /* Adjust height to fit the container */
+    height: auto; /* Ensure image height adjusts to fit container */
+    max-height: 150px; /* Limit maximum height of images */
     border-radius: 8px;
 }
 
@@ -231,5 +235,10 @@ footer {
     .contact-info,
     .contact-map {
         width: 100%;
+    }
+
+    .header-text h1,
+    .header-text p {
+        font-size: 1.5em; /* Adjust text size for mobile */
     }
 }
