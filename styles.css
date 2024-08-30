@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background: #e0e0e0;
     color: #333;
+    padding: 20px; /* Add padding to create margin space */
 }
 
 /* Navigation Bar */
@@ -19,11 +20,13 @@ body {
     align-items: center;
     background: #343a40; /* Dark background for contrast */
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 2rem; /* Add horizontal padding for margin */
     position: fixed;
-    width: 100%;
+    width: calc(100% - 40px); /* Account for padding */
     top: 0;
+    left: 20px;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .navbar .logo img {
@@ -45,13 +48,12 @@ body {
     height: 3px;
     background: #fff;
     margin: 3px 0;
-    transition: 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .navbar .nav-links {
     display: flex;
     gap: 1rem;
-    list-style: none;
 }
 
 .navbar .nav-links a {
@@ -74,9 +76,10 @@ body {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 6rem 1rem;
+    padding: 4rem 1rem; /* Reduced padding for a cleaner look */
     position: relative;
     margin-top: 60px; /* Account for fixed navbar */
+    border-radius: 8px;
 }
 
 .hero-content {
@@ -85,46 +88,48 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjusted font size */
     margin-bottom: 1rem;
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjusted font size */
 }
 
 /* About Section */
 #about {
-    padding: 2rem 1rem;
+    padding: 2rem;
     background: #fff;
     color: #333;
+    border-radius: 8px;
 }
 
 #about h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted font size */
     margin-bottom: 1rem;
     text-align: center;
 }
 
 #about p {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjusted font size */
 }
 
 #about h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjusted font size */
     margin: 1rem 0;
 }
 
 /* Menu Section */
 #menu {
-    padding: 2rem 1rem;
+    padding: 2rem;
     background: #f9f9f9;
+    border-radius: 8px;
 }
 
 #menu h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted font size */
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -138,7 +143,7 @@ body {
 
 .menu-item {
     flex: 1;
-    max-width: 300px;
+    max-width: 280px; /* Adjusted max-width */
     background: #fff;
     padding: 1rem;
     border-radius: 8px;
@@ -152,18 +157,19 @@ body {
 }
 
 .menu-item h3 {
-    margin: 1rem 0;
-    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    font-size: 1.5rem; /* Adjusted font size */
 }
 
 /* Testimonials Section */
 #testimonials {
-    padding: 2rem 1rem;
+    padding: 2rem;
     background: #fff;
+    border-radius: 8px;
 }
 
 #testimonials h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted font size */
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -181,8 +187,8 @@ body {
 
 .testimonial img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 70px; /* Adjusted size */
+    height: 70px; /* Adjusted size */
     object-fit: cover;
 }
 
@@ -192,7 +198,7 @@ body {
 
 .testimonial-content p {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjusted font size */
 }
 
 .stars {
@@ -200,13 +206,14 @@ body {
 }
 
 .star {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjusted font size */
 }
 
 /* Google Map Section */
 #map {
-    padding: 2rem 1rem;
+    padding: 2rem;
     background: #fff;
+    border-radius: 8px;
 }
 
 #map h2 {
@@ -216,13 +223,14 @@ body {
 
 /* Contact Section */
 #contact {
-    padding: 2rem 1rem;
+    padding: 2rem;
     background: #f9f9f9;
     text-align: center;
+    border-radius: 8px;
 }
 
 #contact h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted font size */
     margin-bottom: 1rem;
 }
 
@@ -241,6 +249,7 @@ footer {
     background: #343a40;
     color: #fff;
     text-align: center;
+    border-radius: 8px;
 }
 
 /* Responsive Design */
@@ -274,3 +283,30 @@ footer {
         opacity: 1;
     }
 }
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #343a40; /* Dark background for contrast */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem; /* Font size for the button */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+    display: none; /* Hidden by default */
+}
+
+.back-to-top:hover {
+    background: #495057; /* Darker background on hover */
+    transform: scale(1.1);
+}
+
+/* Show button when scrolled down */
+body.scrolled .back-to-top {
+    display: block;
+}
+
