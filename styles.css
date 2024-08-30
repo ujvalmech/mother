@@ -185,6 +185,11 @@ footer {
     background-color: #0056b3;
 }
 
+/* Page Headings Adjustments */
+.section h2 {
+    margin-left: 10px; /* Move heading slightly left */
+}
+
 @media (max-width: 768px) {
     .navbar-menu {
         display: none;
