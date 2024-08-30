@@ -17,10 +17,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #444;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background for contrast */
     color: #fff;
     padding: 0.5rem 1rem;
     position: relative;
+    z-index: 1000;
 }
 
 .navbar .logo img {
@@ -67,12 +68,18 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('paste hero image link here');
+    background-image: url('https://github.com/ujvalmech/mother/blob/main/background.png?raw=true');
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
     padding: 4rem 1rem;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -125,6 +132,7 @@ body {
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .menu-item img {
@@ -157,6 +165,7 @@ body {
     background: #fff;
     padding: 1rem;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .testimonial img {
