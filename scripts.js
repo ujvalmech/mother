@@ -1,18 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const backToHomeButton = document.querySelector('.back-to-home');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
     const navbarMenu = document.querySelector('.navbar-menu');
-
-    // Show/Hide "Back to Home" button based on scroll position
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToHomeButton.style.display = 'block';
-        } else {
-            backToHomeButton.style.display = 'none';
-        }
+    
+    menuToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
     });
 
-    // Toggle Navbar menu on smaller screens
-    document.querySelector('.navbar-logo').addEventListener('click', function() {
-        navbarMenu.classList.toggle('active');
+    // Show Back to Top button on scroll
+    const backToTopButton = document.querySelector('.back-to-home');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
     });
 });
