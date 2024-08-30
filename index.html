@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mother Fast Food & Restaurant - Authentic Gujarati Cuisine">
-    <meta name="author" content="Your Name">
     <title>Mother Fast Food & Restaurant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="#" class="navbar-toggle"><i class="fas fa-bars"></i></a>
         <a href="#" class="navbar-brand">
             <img src="https://raw.githubusercontent.com/ujvalmech/mother/3f66ba31090fc239ccd8c1187c6de011853649e7/logo.svg" alt="Mother Fast Food Logo">
         </a>
+        <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
         <div class="navbar-menu">
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
-            <a href="#menu">Menu</a>
+            <a href="#service">Menu</a>
+            <a href="#testimonial">Testimonials</a>
             <a href="#contact">Contact Us</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header>
+    <!-- Header with Full-Page Background Image -->
+    <header class="header">
         <div class="header-overlay">
             <div class="header-text">
                 <h1>Mother Fast Food & Restaurant</h1>
@@ -36,23 +32,31 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
+    <!-- Home Section -->
+    <section id="home" class="section container">
+        <div class="partition-box">
+            <!-- Content specific to Home page -->
+            <h2>Welcome to Mother Fast Food & Restaurant</h2>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section container">
+        <div class="partition-box">
             <h2>About Us</h2>
             <p>Mother Fast Food & Restaurant is one of the oldest and most beloved Gujarati food providers in Surat. Since 1998, we have been dedicated to serving authentic vegetarian Gujarati cuisine. Our commitment to quality, taste, and hygiene has earned us a loyal customer base and a Google rating of 4.5 out of 5.0.</p>
             <p>Our family-run business ensures that every meal is prepared with care and consistency, as we handle everything ourselves without involving external staff. This allows us to maintain the high standards that our customers have come to expect and appreciate.</p>
             <h3>Opening Times</h3>
-            <p><strong>Lunch Monday - Saturday:</strong> 12:30 pm - 03:30 pm</p>
-            <p><strong>Dinner Monday - Saturday:</strong> 07:30 pm - 11:00 pm</p>
-            <p><strong>Sunday:</strong> Closed</p>
+            <p>Lunch Monday - Saturday: 12:30 pm - 03:30 pm</p>
+            <p>Dinner Monday - Saturday: 07:30 pm - 11:00 pm</p>
+            <p>Sunday: Closed</p>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu">
-        <div class="container">
-            <h2>Menu</h2>
+    <section id="service" class="section container">
+        <div class="partition-box">
+            <h2>Our Menu</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <img src="https://github.com/ujvalmech/mother/blob/main/dish-1.jpg?raw=true" alt="Gujarati Thali">
@@ -78,14 +82,36 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:motherfastfoodrestaurant@gmail.com">motherfastfoodrestaurant@gmail.com</a></p>
-            <p><i class="fab fa-facebook"></i> <strong>Facebook:</strong> <a href="https://www.facebook.com/motherfastfood.in/" target="_blank">facebook.com/motherfastfood.in</a></p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.864655483635!2d72.78890807380276!3d21.19753488196323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c329067a09f%3A0x531880cc3b7c8bae!2sMother%20Fast%20Food%20%26%20Restaurant!5e0!3m2!1sen!2sin!4v1725016849137!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Testimonials Section -->
+    <section id="testimonial" class="section container">
+        <div class="partition-box">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <img src="paste reviewer profile picture link here" alt="Reviewer">
+                <div class="testimonial-content">
+                    <p>"Mother Fast Food & Restaurant offers the best Gujarati food in Surat. Their dishes are always fresh and delicious!"</p>
+                    <div class="rating">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                    </div>
+                    <p>- Reviewer Name</p>
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section container">
+        <div class="partition-box contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p><strong>Address:</strong> Mother Fast Food & Restaurant, New Adajan, Shop no-13, Crystal Complex, beside Jalaram row-house, near Gangeshwar temple, Chatrapati Shivaji Marg, to Honey Park Rd, Surat, Gujarat 395009.</p>
+                <p><strong>Email:</strong> <a href="mailto:motherfastfoodrestaurant@gmail.com">motherfastfoodrestaurant@gmail.com</a></p>
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/motherfastfood.in/" target="_blank">Visit our Facebook Page</a></p>
+            </div>
+            <div class="contact-map">
+                <h2>Find Us</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.864655483635!2d72.78890807380276!3d21.19753488196323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c329067a09f%3A0x531880cc3b7c8bae!2sMother%20Fast%20Food%20%26%20Restaurant!5e0!3m2!1sen!2sin!4v1725016849137!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -95,8 +121,8 @@
         <p>&copy; 2024 Mother Fast Food & Restaurant. All rights reserved.</p>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-home">Back to Top</button>
+    <!-- Back to Home Button -->
+    <button class="back-to-home" onclick="scrollToTop()">Back to Home</button>
 
     <script src="scripts.js"></script>
 </body>
