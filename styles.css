@@ -22,6 +22,7 @@ body {
     background-color: #343a40;
     color: #fff;
     position: relative;
+    z-index: 1000;
 }
 
 .navbar-brand img {
@@ -60,7 +61,6 @@ header {
     justify-content: center;
     align-items: center;
     color: #fff;
-    filter: blur(5px);
 }
 
 .header-overlay {
@@ -78,56 +78,59 @@ header {
     z-index: 1;
 }
 
-.header-overlay h1 {
-    font-size: 2.5rem;
-    margin: 0;
+.header-text {
+    position: relative;
 }
 
-.header-overlay p {
+.header-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header-text p {
     font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 section {
     padding: 50px 0;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 .menu-items {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
 }
 
 .menu-item {
-    flex: 1 1 calc(50% - 20px);
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
-    text-align: center;
-    background: #f8f9fa;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
 }
 
 .menu-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 200px;
+    object-fit: cover;
 }
 
 .menu-item h3 {
     font-size: 1.5rem;
     margin: 10px 0;
+    padding: 0 15px;
 }
 
 .menu-item p {
     padding: 0 15px;
+    display: none;
 }
 
 .map-container {
@@ -137,6 +140,8 @@ h2 {
 
 iframe {
     border: 0;
+    width: 100%;
+    max-width: 600px;
 }
 
 footer {
@@ -174,6 +179,7 @@ footer {
         top: 60px;
         right: 0;
         width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .navbar-menu.active {
