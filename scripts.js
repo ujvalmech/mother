@@ -1,9 +1,11 @@
-// Script for Mobile Menu Toggle
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function() {
+    const backToHomeButton = document.querySelector('.back-to-home');
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToHomeButton.style.display = 'block';
+        } else {
+            backToHomeButton.style.display = 'none';
+        }
     });
 });
