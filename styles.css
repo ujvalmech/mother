@@ -41,7 +41,7 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: 13px; /* Reduced font size */
     transition: background-color 0.3s;
 }
 
@@ -122,12 +122,8 @@ body {
 
 .menu-item img {
     width: 100%;
-    height: auto;
+    height: auto; /* Adjust height */
     border-radius: 8px;
-}
-
-.menu-description {
-    display: none;
 }
 
 .contact-container {
