@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mother Fast Food & Restaurant</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <a href="#" class="navbar-brand">
-            <img src="https://raw.githubusercontent.com/ujvalmech/mother/3f66ba31090fc239ccd8c1187c6de011853649e7/logo.svg" alt="Mother Fast Food Logo">
-        </a>
-        <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+        <button class="navbar-toggle">☰</button>
         <div class="navbar-menu">
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
-            <a href="#service">Menu</a>
-            <a href="#testimonial">Testimonials</a>
+            <a href="#menu">Menu</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact Us</a>
         </div>
     </nav>
 
-    <!-- Header with Full-Page Background Image -->
+    <!-- Header -->
     <header class="header">
         <div class="header-overlay">
             <div class="header-text">
@@ -32,89 +30,81 @@
         </div>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="section container">
-        <div class="partition-box">
-            <!-- Content specific to Home page -->
-            <h2>Welcome to Mother Fast Food & Restaurant</h2>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="section container">
-        <div class="partition-box">
-            <h2>About Us</h2>
-            <p>Mother Fast Food & Restaurant is one of the oldest and most beloved Gujarati food providers in Surat. Since 1998, we have been dedicated to serving authentic vegetarian Gujarati cuisine. Our commitment to quality, taste, and hygiene has earned us a loyal customer base and a Google rating of 4.5 out of 5.0.</p>
-            <p>Our family-run business ensures that every meal is prepared with care and consistency, as we handle everything ourselves without involving external staff. This allows us to maintain the high standards that our customers have come to expect and appreciate.</p>
-            <h3>Opening Times</h3>
-            <p>Lunch Monday - Saturday: 12:30 pm - 03:30 pm</p>
-            <p>Dinner Monday - Saturday: 07:30 pm - 11:00 pm</p>
-            <p>Sunday: Closed</p>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="service" class="section container">
-        <div class="partition-box">
-            <h2>Our Menu</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <img src="https://github.com/ujvalmech/mother/blob/main/dish-1.jpg?raw=true" alt="Gujarati Thali">
-                    <h3>Gujarati Thali</h3>
-                    <p class="menu-description">Our Gujarati thali features 2 sabjis, 5 chapatis (or parathas), dal-rice, and salad, with buttermilk and papad available for an extra charge, all made with a homemade touch.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="https://github.com/ujvalmech/mother/blob/main/dish-2.jpg?raw=true" alt="Odo & Bajri Rotla">
-                    <h3>Odo & Bajri Rotla</h3>
-                    <p class="menu-description">Our Bajri na Rotla and Odo, traditional Kathiyawadi items, feature hearty bajri rotla served with flavorful odo for an authentic taste.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="https://github.com/ujvalmech/mother/blob/main/dish-3.jpg?raw=true" alt="Kadhi Khichdi">
-                    <h3>Kadhi Khichdi</h3>
-                    <p class="menu-description">Our Gujarati Kadhi Khichdi combines aromatic kadhi with perfectly cooked khichdi, offering a comforting and authentic taste of Gujarat.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="https://github.com/ujvalmech/mother/blob/main/dish-4.jpg?raw=true" alt="Dal Bati">
-                    <h3>Dal Bati</h3>
-                    <p class="menu-description">Our Rajasthani Dal Bati features crispy, golden bati served with savory dal, delivering an authentic and hearty taste of Rajasthan.</p>
-                </div>
+    <!-- Main Content -->
+    <main>
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <div class="container partition-box">
+                <h2>About Us</h2>
+                <p>Mother Fast Food & Restaurant is one of the oldest and most beloved Gujarati food providers in Surat. Since 1998, we have been dedicated to serving authentic vegetarian Gujarati cuisine. Our commitment to quality, taste, and hygiene has earned us a loyal customer base and a Google rating of 4.5 out of 5.0.</p>
+                <p>Our family-run business ensures that every meal is prepared with care and consistency, as we handle everything ourselves without involving external staff. This allows us to maintain the high standards that our customers have come to expect and appreciate.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonial" class="section container">
-        <div class="partition-box">
-            <h2>Testimonials</h2>
-            <div class="testimonial">
-                <img src="paste reviewer profile picture link here" alt="Reviewer">
-                <div class="testimonial-content">
-                    <p>"Mother Fast Food & Restaurant offers the best Gujarati food in Surat. Their dishes are always fresh and delicious!"</p>
-                    <div class="rating">
-                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+        <!-- Menu Section -->
+        <section id="menu" class="section">
+            <div class="container partition-box">
+                <h2>Menu</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="https://github.com/ujvalmech/mother/blob/main/dish-1.jpg?raw=true" alt="Gujarati Thali">
+                        <div class="info">
+                            <h3>Gujarati Thali</h3>
+                            <p>Our Gujarati thali features 2 sabjis, 5 chapatis (or parathas), dal-rice, and salad, with buttermilk and papad available for an extra charge, all made with a homemade touch.</p>
+                        </div>
                     </div>
-                    <p>- Reviewer Name</p>
+                    <div class="menu-item">
+                        <img src="https://github.com/ujvalmech/mother/blob/main/dish-2.jpg?raw=true" alt="Odo & Bajri Rotla">
+                        <div class="info">
+                            <h3>Odo & Bajri Rotla</h3>
+                            <p>Our Bajri na Rotla and Odo, traditional Kathiyawadi items, feature hearty bajri rotla served with flavorful odo for an authentic taste.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://github.com/ujvalmech/mother/blob/main/dish-3.jpg?raw=true" alt="Kadhi Khichdi">
+                        <div class="info">
+                            <h3>Kadhi Khichdi</h3>
+                            <p>Our Gujarati Kadhi Khichdi combines aromatic kadhi with perfectly cooked khichdi, offering a comforting and authentic taste of Gujarat.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://github.com/ujvalmech/mother/blob/main/dish-4.jpg?raw=true" alt="Dal Bati">
+                        <div class="info">
+                            <h3>Dal Bati</h3>
+                            <p>Our Rajasthani Dal Bati features crispy, golden bati served with savory dal, delivering an authentic and hearty taste of Rajasthan.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Add more testimonials as needed -->
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="section container">
-        <div class="partition-box contact-container">
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p><strong>Address:</strong> Mother Fast Food & Restaurant, New Adajan, Shop no-13, Crystal Complex, beside Jalaram row-house, near Gangeshwar temple, Chatrapati Shivaji Marg, to Honey Park Rd, Surat, Gujarat 395009.</p>
-                <p><strong>Email:</strong> <a href="mailto:motherfastfoodrestaurant@gmail.com">motherfastfoodrestaurant@gmail.com</a></p>
-                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/motherfastfood.in/" target="_blank">Visit our Facebook Page</a></p>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="container partition-box">
+                <h2>Testimonials</h2>
+                <!-- Add testimonials content here -->
             </div>
-            <div class="contact-map">
-                <h2>Find Us</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.864655483635!2d72.78890807380276!3d21.19753488196323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c329067a09f%3A0x531880cc3b7c8bae!2sMother%20Fast%20Food%20%26%20Restaurant!5e0!3m2!1sen!2sin!4v1725016849137!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <div class="contact-info partition-box">
+                    <h2>Contact Us</h2>
+                    <p>Mother Fast Food & Restaurant,<br>
+                    New Adajan, Shop no-13, Crystal Complex,<br>
+                    beside of Jalaram Row-house,<br>
+                    near Gangeshwar Temple, Chatrapati Shivaji Marg,<br>
+                    to, Honey Park Rd, Surat, Gujarat 395009.</p>
+                    <p><strong>Email:</strong> <a href="mailto:motherfastfoodrestaurant@gmail.com">motherfastfoodrestaurant@gmail.com</a></p>
+                    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/motherfastfood.in/" target="_blank">Facebook Page</a></p>
+                </div>
+                <div class="contact-map partition-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.864655483635!2d72.78890807380276!3d21.19753488196323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c329067a09f%3A0x531880cc3b7c8bae!2sMother%20Fast%20Food%20%26%20Restaurant!5e0!3m2!1sen!2sin!4v1725016849137!5m2!1sen!2sin" loading="lazy"></iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -122,8 +112,8 @@
     </footer>
 
     <!-- Back to Home Button -->
-    <button class="back-to-home" onclick="scrollToTop()">Back to Home</button>
+    <button class="back-to-home">Back to Top</button>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
