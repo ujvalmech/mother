@@ -8,7 +8,7 @@ body, h1, h2, h3, p {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #f4f4f4;
+    background: #e0e0e0;
     color: #333;
 }
 
@@ -17,15 +17,35 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background for contrast */
+    background: #343a40; /* Dark background for contrast */
     color: #fff;
-    padding: 0.5rem 1rem;
-    position: relative;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
 }
 
 .navbar .logo img {
     height: 50px;
+}
+
+.navbar .adsense {
+    display: none; /* Hidden by default */
+}
+
+.navbar .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 .navbar .nav-links {
@@ -43,27 +63,8 @@ body {
 }
 
 .navbar .nav-links a:hover {
-    background: #666;
+    background: #495057;
     transform: scale(1.05);
-}
-
-.navbar .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.navbar .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-.navbar .adsense {
-    flex-shrink: 0;
-    text-align: center;
 }
 
 /* Hero Section */
@@ -73,8 +74,9 @@ body {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
     position: relative;
+    margin-top: 60px; /* Account for fixed navbar */
 }
 
 .hero-content {
@@ -83,12 +85,13 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 /* About Section */
@@ -99,22 +102,29 @@ body {
 }
 
 #about h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #about p {
     margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#about h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
 /* Menu Section */
 #menu {
     padding: 2rem 1rem;
-    background: #fff;
+    background: #f9f9f9;
 }
 
 #menu h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -123,12 +133,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 }
 
 .menu-item {
     flex: 1;
-    min-width: 220px;
-    background: #f9f9f9;
+    max-width: 300px;
+    background: #fff;
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
@@ -142,17 +153,17 @@ body {
 
 .menu-item h3 {
     margin: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 /* Testimonials Section */
 #testimonials {
     padding: 2rem 1rem;
-    background: #f4f4f4;
+    background: #fff;
 }
 
 #testimonials h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -162,7 +173,7 @@ body {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    background: #fff;
+    background: #f4f4f4;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -170,8 +181,8 @@ body {
 
 .testimonial img {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
 }
 
@@ -181,6 +192,7 @@ body {
 
 .testimonial-content p {
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .stars {
@@ -188,7 +200,7 @@ body {
 }
 
 .star {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* Google Map Section */
@@ -205,12 +217,12 @@ body {
 /* Contact Section */
 #contact {
     padding: 2rem 1rem;
-    background: #f4f4f4;
+    background: #f9f9f9;
     text-align: center;
 }
 
 #contact h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -225,14 +237,10 @@ body {
 
 /* Footer */
 footer {
-    padding: 1rem 1rem;
-    background: #333;
+    padding: 1rem;
+    background: #343a40;
     color: #fff;
     text-align: center;
-}
-
-footer p {
-    margin: 0;
 }
 
 /* Responsive Design */
@@ -241,7 +249,7 @@ footer p {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: #444;
+        background: #343a40;
         position: absolute;
         top: 60px;
         left: 0;
