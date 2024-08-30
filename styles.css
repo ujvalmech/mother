@@ -7,7 +7,7 @@ body {
     background: #f4f4f4;
 }
 
-/* Margin around the entire page */
+/* Container with margin */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,34 +21,41 @@ body {
     padding: 10px 20px;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(100% - 40px); /* Adjust for padding */
+    margin: 0 20px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
 }
 
-.navbar .logo img {
+.navbar-logo img {
     height: 40px; /* Adjust logo size */
 }
 
-.navbar .nav-links {
+.navbar-menu {
     display: flex;
     gap: 1rem;
 }
 
-.navbar .nav-links a {
+.navbar-menu a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background 0.3s, transform 0.3s;
+    font-size: 1rem;
 }
 
-.navbar .nav-links a:hover {
+.navbar-menu a:hover {
     background: #495057;
     transform: scale(1.05);
+}
+
+.navbar-ad {
+    display: none; /* Hide AdSense code by default */
 }
 
 /* Hero Section */
@@ -59,8 +66,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 4rem 1rem;
-    position: relative;
-    margin-top: 60px; /* Account for fixed navbar */
+    margin-top: 80px; /* Adjust for fixed navbar */
     border-radius: 8px;
 }
 
@@ -131,6 +137,12 @@ body {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 .menu-item img {
@@ -258,23 +270,33 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar .nav-links {
+    .navbar-menu {
         display: none;
         flex-direction: column;
         width: 100%;
         background: #343a40;
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0;
         padding: 1rem;
     }
 
-    .navbar .nav-links.active {
+    .navbar-menu.active {
         display: flex;
     }
 
-    .navbar .menu-toggle {
-        display: flex;
+    .navbar-menu a {
+        padding: 1rem;
+        border-bottom: 1px solid #495057;
+    }
+
+    .navbar-logo img {
+        height: 30px; /* Adjust logo size for smaller screens */
+    }
+
+    .back-to-home {
+        bottom: 10px;
+        right: 10px;
     }
 }
 
