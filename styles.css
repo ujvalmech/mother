@@ -1,284 +1,83 @@
-/* General Layout and Styling */
+/* Base Styles */
 body {
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
     color: #333;
     background: #f4f4f4;
 }
 
-/* Container with margin */
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* Navbar */
-.navbar {
-    background: #343a40;
-    color: #fff;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: calc(100% - 40px); /* Adjust for padding */
-    margin: 0 20px;
-    z-index: 1000;
+header {
+    background-image: url('https://github.com/ujvalmech/mother/blob/main/header.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 8px;
+    color: #fff;
+    text-align: center;
 }
 
-.navbar-logo img {
-    height: 40px; /* Adjust logo size */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header .subtitle {
+    font-size: 1.5rem;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #343a40;
+    padding: 10px 20px;
+}
+
+.navbar-brand img {
+    max-width: 150px;
 }
 
 .navbar-menu {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s, transform 0.3s;
+    margin: 0 15px;
     font-size: 1rem;
 }
 
 .navbar-menu a:hover {
-    background: #495057;
-    transform: scale(1.05);
+    color: #ffd700;
 }
 
-.navbar-ad {
-    display: none; /* Hide AdSense code by default */
+.navbar-toggle {
+    display: none;
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('https://github.com/ujvalmech/mother/blob/main/header.jpg?raw=true');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 4rem 1rem;
-    margin-top: 80px; /* Adjust for fixed navbar */
-    border-radius: 8px;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-}
-
-/* About Section */
-#about {
-    padding: 2rem;
-    background: #fff;
-    color: #333;
-    border-radius: 8px;
-}
-
-#about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-#about p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-#about h3 {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-}
-
-/* Menu Section */
-#menu {
-    padding: 2rem;
-    background: #f9f9f9;
-    border-radius: 8px;
-}
-
-#menu h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.menu-item {
-    flex: 1;
-    max-width: 280px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-.menu-item img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.menu-item h3 {
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
-}
-
-/* Testimonials Section */
-#testimonials {
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-}
-
-#testimonials h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.testimonial {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.testimonial img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-}
-
-.testimonial-content {
-    flex: 1;
-}
-
-.testimonial-content p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-}
-
-.stars {
-    color: gold;
-}
-
-.star {
-    font-size: 1.2rem;
-}
-
-/* Google Map Section */
-#map {
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-}
-
-#map h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-/* Contact Section */
-#contact {
-    padding: 2rem;
-    background: #f9f9f9;
-    text-align: center;
-    border-radius: 8px;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#contact a {
-    color: #333;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    padding: 1rem;
-    background: #343a40;
-    color: #fff;
-    text-align: center;
-    border-radius: 8px;
-}
-
-/* Back to Home Button */
-.back-to-home {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #343a40;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background 0.3s, transform 0.3s;
-    display: none; /* Hidden by default */
-}
-
-.back-to-home:hover {
-    background: #495057;
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
+/* Mobile Styles */
 @media (max-width: 768px) {
     .navbar-menu {
         display: none;
         flex-direction: column;
-        width: 100%;
-        background: #343a40;
         position: absolute;
-        top: 60px;
+        top: 50px;
         right: 0;
-        padding: 1rem;
+        background-color: #343a40;
+        width: 100%;
+        text-align: center;
     }
 
     .navbar-menu.active {
@@ -286,26 +85,125 @@ footer {
     }
 
     .navbar-menu a {
-        padding: 1rem;
-        border-bottom: 1px solid #495057;
+        margin: 10px 0;
     }
 
-    .navbar-logo img {
-        height: 30px; /* Adjust logo size for smaller screens */
+    .navbar-toggle {
+        display: block;
+        color: #fff;
+        background: #343a40;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1.5rem;
     }
 
-    .back-to-home {
-        bottom: 10px;
-        right: 10px;
+    header h1 {
+        font-size: 2rem;
     }
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+/* Menu Section */
+#menu {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.menu-details {
+    display: none; /* Hidden by default */
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Mobile Menu Details */
+@media (max-width: 768px) {
+    .menu-item {
+        text-align: center;
     }
-    to {
-        opacity: 1;
+
+    .menu-details {
+        display: none; /* Hidden by default */
     }
+
+    .read-more {
+        background: #343a40;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .read-more:focus {
+        outline: none;
+    }
+
+    .read-more.active ~ .menu-details {
+        display: block; /* Show details when read more is clicked */
+    }
+}
+
+/* Back to Top Button */
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.back-to-home:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
