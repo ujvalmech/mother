@@ -1,54 +1,36 @@
-/* Basic Reset */
-body, h1, h2, h3, p {
+/* General Layout and Styling */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #e0e0e0;
     color: #333;
-    padding: 20px; /* Add padding to create margin space */
+    background: #f4f4f4;
 }
 
-/* Navigation Bar */
+/* Margin around the entire page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
 .navbar {
+    background: #343a40;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #343a40; /* Dark background for contrast */
-    color: #fff;
-    padding: 1rem 2rem; /* Add horizontal padding for margin */
-    position: fixed;
-    width: calc(100% - 40px); /* Account for padding */
-    top: 0;
-    left: 20px;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .navbar .logo img {
-    height: 50px;
-}
-
-.navbar .adsense {
-    display: none; /* Hidden by default */
-}
-
-.navbar .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.navbar .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 3px 0;
-    transition: background 0.3s, transform 0.3s;
+    height: 40px; /* Adjust logo size */
 }
 
 .navbar .nav-links {
@@ -60,8 +42,8 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background 0.3s, transform 0.3s;
     border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .navbar .nav-links a:hover {
@@ -76,7 +58,7 @@ body {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 4rem 1rem; /* Reduced padding for a cleaner look */
+    padding: 4rem 1rem;
     position: relative;
     margin-top: 60px; /* Account for fixed navbar */
     border-radius: 8px;
@@ -88,13 +70,13 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 2.5rem; /* Adjusted font size */
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content p {
-    font-size: 1.2rem; /* Adjusted font size */
+    font-size: 1.2rem;
 }
 
 /* About Section */
@@ -106,18 +88,18 @@ body {
 }
 
 #about h2 {
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 #about p {
     margin-bottom: 1rem;
-    font-size: 1rem; /* Adjusted font size */
+    font-size: 1rem;
 }
 
 #about h3 {
-    font-size: 1.2rem; /* Adjusted font size */
+    font-size: 1.2rem;
     margin: 1rem 0;
 }
 
@@ -129,7 +111,7 @@ body {
 }
 
 #menu h2 {
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -143,7 +125,7 @@ body {
 
 .menu-item {
     flex: 1;
-    max-width: 280px; /* Adjusted max-width */
+    max-width: 280px;
     background: #fff;
     padding: 1rem;
     border-radius: 8px;
@@ -158,7 +140,7 @@ body {
 
 .menu-item h3 {
     margin: 0.5rem 0;
-    font-size: 1.5rem; /* Adjusted font size */
+    font-size: 1.5rem;
 }
 
 /* Testimonials Section */
@@ -169,7 +151,7 @@ body {
 }
 
 #testimonials h2 {
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -187,8 +169,8 @@ body {
 
 .testimonial img {
     border-radius: 50%;
-    width: 70px; /* Adjusted size */
-    height: 70px; /* Adjusted size */
+    width: 70px;
+    height: 70px;
     object-fit: cover;
 }
 
@@ -198,7 +180,7 @@ body {
 
 .testimonial-content p {
     margin-bottom: 0.5rem;
-    font-size: 1rem; /* Adjusted font size */
+    font-size: 1rem;
 }
 
 .stars {
@@ -206,7 +188,7 @@ body {
 }
 
 .star {
-    font-size: 1.2rem; /* Adjusted font size */
+    font-size: 1.2rem;
 }
 
 /* Google Map Section */
@@ -230,7 +212,7 @@ body {
 }
 
 #contact h2 {
-    font-size: 2rem; /* Adjusted font size */
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -250,6 +232,28 @@ footer {
     color: #fff;
     text-align: center;
     border-radius: 8px;
+}
+
+/* Back to Home Button */
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #343a40;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+    display: none; /* Hidden by default */
+}
+
+.back-to-home:hover {
+    background: #495057;
+    transform: scale(1.1);
 }
 
 /* Responsive Design */
@@ -283,30 +287,3 @@ footer {
         opacity: 1;
     }
 }
-/* Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #343a40; /* Dark background for contrast */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem; /* Font size for the button */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background 0.3s, transform 0.3s;
-    display: none; /* Hidden by default */
-}
-
-.back-to-top:hover {
-    background: #495057; /* Darker background on hover */
-    transform: scale(1.1);
-}
-
-/* Show button when scrolled down */
-body.scrolled .back-to-top {
-    display: block;
-}
-
